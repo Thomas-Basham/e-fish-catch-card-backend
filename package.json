@@ -1,0 +1,19 @@
+{
+  "name": "e-fish-catch-card-backend",
+  "version": "1.0.0",
+  "description": "Backend Server for E-fish catch card Built with Cloud Firestone ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomas-Basham/e-fish-catch-card-backend.git"
+  },
+  "author": "Thomas Basham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thomas-Basham/e-fish-catch-card-backend/issues"
+  },
+  "homepage": "https://github.com/Thomas-Basham/e-fish-catch-card-backend#readme"
+}
