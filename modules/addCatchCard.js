@@ -1,5 +1,4 @@
 const firebase = require("../db");
-const CatchCard = require("../models/catchCard");
 const fireStore = firebase.firestore();
 
 const addCatchCard = async (req, res, next) => {
