@@ -1,27 +1,29 @@
+const firebase = require("../db");
+const CatchCard = require("../models/catchCard");
+const fireStore = firebase.firestore();
+
 const getAllCatchCards = async (req, res, next) => {
   try {
-    console.log("Getting all employees");
-    const employees = await fireStore.collection("catch-cards");
-    const data = await employees.get();
+    console.log("Getting all catch-cards");
+    const CatchCards = await fireStore.collection("catch-cards");
+    const data = await CatchCards.get();
     const arr = [];
     if (data.empty) {
       res.status(200).json({ message: "No records found" });
     } else {
       let total = 0;
       data.forEach((item) => {
-        const employee = new Employee(
+        const catchCard = new CatchCard(
           item.id,
-          item.data().fullName,
-          item.data().age,
-          item.data().contact,
-          item.data().department
+          item.data().date_caught,
+          item.data().species,
+          item.data().weight,
         );
-        arr.push(employee);
+        arr.push(catchCard);
         total = total + 1;
       });
       res.status(200).json({
-        listing: arr,
-        count: total,
+        arr
       });
     }
   } catch (error) {
