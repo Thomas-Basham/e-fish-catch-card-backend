@@ -15,8 +15,11 @@ const axios = require("axios");
 
 // Modules
 
-const addCatchCard = require("./modules/addCatchCard");
 const getAllCatchCards = require("./modules/getAllCatchCards");
+const getCatchCard = require("./modules/getCatchCard");
+const addCatchCard = require("./modules/addCatchCard");
+const editCatchCard = require("./modules/editCatchCard");
+
 // ROUTES
 app.get("/", (request, response) => {
   response.send("Welcome to the E-fish-catch-card server!");
@@ -25,6 +28,7 @@ app.get("/", (request, response) => {
 // firestone Endpoints
 app.post("/catchCard", addCatchCard);
 app.get("/catchcard", getAllCatchCards);
+
 
 // Errors
 app.get("*", (request, response) => {
