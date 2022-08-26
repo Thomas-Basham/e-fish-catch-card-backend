@@ -26,8 +26,10 @@ app.get("/", (request, response) => {
 });
 
 // firestone Endpoints
-app.post("/catchCard", addCatchCard);
 app.get("/catchcard", getAllCatchCards);
+app.get("/catchcard", getCatchCard);
+app.post("/catchCard", addCatchCard);
+app.post("/catchCard", editCatchCard);
 
 
 // Errors
