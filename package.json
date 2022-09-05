@@ -4,7 +4,8 @@
   "description": "Backend Server for E-fish catch card Built with Cloud Firestone ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --exit",
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,18 @@
     "firebase": "^9.9.3",
     "firebase-admin": "^11.0.1",
     "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "jest": "^29.0.2",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
